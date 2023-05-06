@@ -8,7 +8,7 @@ registerRouter.post("/", async (req, res) => {
   const { email, password, name, isAdmin } = req.body;
   const details = req.body;
   try {
-    if (!email || !password || !name || !isAdmin) {
+    if (!email || !password || !name) {
       res.send("Fill all the details");
     } else {
       bcrypt.hash(details.password, 3, async (err, hash) => {
