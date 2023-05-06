@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 
+// middleware for privateRoute
 const privateRoute = (req, res, next) => {
   const token = req.headers.authorization;
 
